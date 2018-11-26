@@ -84,6 +84,8 @@ class MainActivity : AppCompatActivity() {
     private fun initUser(response: ResponseUser) {
         Picasso.with(this).load(response.result!!.profilePictureUrl).into(imageView);
         textView.setText(response.result!!.username)
+
+
     }
 
 
@@ -93,6 +95,18 @@ class MainActivity : AppCompatActivity() {
         val gridLayoutManager = GridLayoutManager(this, 3)
         movies!!.layoutManager = gridLayoutManager
         movies!!.adapter = moviesAdapter
+
+        fun popular(p: Movies): Int? = p.likeCount
+        fun recent(p: Movies): String? = p.createDate
+
+        textView3.setOnClickListener{
+            response.result!!.items!!.sortedByDescending { popular(it) }
+        }
+        textView4.setOnClickListener{
+            response.result!!.items!!.sortedByDescending { recent(it) }
+        }
+
+        movies!!.adapter.notifyDataSetChanged()
     }
 
     private fun initFollowersRecycleView(response:ResponseFollowersCollection) {
