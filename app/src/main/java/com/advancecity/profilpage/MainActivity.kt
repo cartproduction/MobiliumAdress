@@ -82,8 +82,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initUser(response: ResponseUser) {
-        Picasso.with(this).load(response.result!!.profilePictureUrl).into(imageView);
-        textView.setText(response.result!!.username)
+        Picasso.with(this).load(response.result!!.profilePictureUrl).into(userPicture);
+        userName.setText(response.result!!.username)
 
 
     }
