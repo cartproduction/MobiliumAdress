@@ -101,12 +101,14 @@ class MainActivity : AppCompatActivity() {
 
         textView3.setOnClickListener{
             response.result!!.items!!.sortedByDescending { popular(it) }
+            movies!!.adapter.notifyDataSetChanged()
         }
         textView4.setOnClickListener{
             response.result!!.items!!.sortedByDescending { recent(it) }
+            movies!!.adapter.notifyDataSetChanged()
         }
 
-        movies!!.adapter.notifyDataSetChanged()
+
     }
 
     private fun initFollowersRecycleView(response:ResponseFollowersCollection) {
