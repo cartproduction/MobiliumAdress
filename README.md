@@ -1,15 +1,14 @@
-# AdvanceCityProfile
+# MobiliumAdressPage
 
 ## Overview
 
-A profile page with Kotlin used API data
+A adres page with Kotlin
 
 Version 1.0
 
 ## Projects/Apps using
 
-* RxKotlin
-* Retrofit2
+* ExpandableLayout
 * RecyclerView
 * Picasso
 * Espresso
