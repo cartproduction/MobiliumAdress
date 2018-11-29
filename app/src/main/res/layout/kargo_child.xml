@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/kargocheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/yurtici" />
+
+    <TextView
+        android:id="@+id/price1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_alignBaseline="@+id/kargocheck"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:text="@string/price" />
+
+    <TextView
+        android:id="@+id/price2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/checkBox2"
+        android:layout_alignLeft="@+id/price1"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="0dp"
+        android:text="@string/price"
+        android:textColor="@color/colorBlack" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/kargocheck"
+        android:layout_below="@+id/kargocheck"
+        android:text="@string/mng" />
+
+</RelativeLayout>

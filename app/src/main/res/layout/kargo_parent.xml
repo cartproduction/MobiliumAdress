@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+        android:layout_height="56dp"
+    android:background="@color/colorHeaders"
+        android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/tvParent"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView11"
+        android:padding="16dp"
+        android:text="@string/kargo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="37dp"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="11dp"
+        app:srcCompat="@mipmap/kargo" />
+
+</RelativeLayout>

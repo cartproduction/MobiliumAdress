@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">ProfilPage</string>
+    <string name="app_name">Adres</string>
+    <string name="teslimat">Teslimat Adresi</string>
+    <string name="evadresi">Ev Adresim -</string>
+    <string name="duzenle"><u>Düzenle</u></string>
+    <string name="adres">Hamidiye mahallesi. Başöğretmen cad. No:0
+    Çekmeköy / İstanbul /Türkiye</string>
+    <string name="adressil">Adresi Sil</string>
+    <string name="yeniadres">Yeni Adres Ekle</string>
+    <string name="kargo">Kargo Seçimi</string>
+    <string name="price">5.95 TL</string>
+    <string name="yurtici">Yurtiçi Kargo</string>
+    <string name="mng">MNG Kargo</string>
+    <string name="hediye">Hediye Paketi İstiyorum</string>
+    <string name="hediyepaket">Hediye Paketi</string>
+    <string name="sipars">SİPARİŞ ÖZETİ</string>
+    <string name="sepet">SEPET</string>
+    <string name="price2">275,00 TL</string>
+    <string name="kargoucret">Kargo Ücreti</string>
+    <string name="price3">5.95 TL</string>
+    <string name="indirimkuponu">İndirim Kuponu</string>
+    <string name="price4">-50,00 TL</string>
+    <string name="toplam">TOPLAM</string>
+    <string name="price5">225,00 TL</string>
+    <string name="adet">2 Adet</string>
+    <string name="kdv">(KDV Dahil)</string>
+    <string name="devamet">DEVAM ET</string>
 </resources>

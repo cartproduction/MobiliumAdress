@@ -6,75 +6,144 @@
     android:layout_height="match_parent">
 <RelativeLayout
     android:layout_width="match_parent"
+    android:background="@color/colorwhite"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        tools:ignore="UnusedAttribute" />
+
     <RelativeLayout
         android:id="@+id/header"
+        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="98dp">
+
+        <include layout="@layout/header" />
+    </RelativeLayout>
+
+    <iammert.com.expandablelib.ExpandableLayout
+        android:id="@+id/teslimat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:parentLayout="@layout/layout_parent"
+        app:childLayout="@layout/layout_child"/>
+
+    <iammert.com.expandablelib.ExpandableLayout
+        android:id="@+id/yeniadres"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/teslimat"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:parentLayout="@layout/yeniadres"
+        app:childLayout="@layout/yeniadres_child"/>
+
+    <iammert.com.expandablelib.ExpandableLayout
+        android:id="@+id/kargo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/yeniadres"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:parentLayout="@layout/kargo_parent"
+        app:childLayout="@layout/kargo_child"/>
+
+    <iammert.com.expandablelib.ExpandableLayout
+        android:id="@+id/hediye"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/kargo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:parentLayout="@layout/hediye_parent"
+        app:childLayout="@layout/hediye_child"/>
 
 
-        <ImageView
-            android:id="@+id/userPicture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            app:srcCompat="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/hediye"
+        android:id="@+id/titlehediye"
+        android:background="@color/colorHeaders"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="50dp">
 
         <TextView
-            android:id="@+id/userName"
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/userPicture"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:text="TextView" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="18dp"
-            android:layout_marginRight="18dp"
-            android:clickable="true"
-            app:srcCompat="@android:drawable/ic_input_add" />
-
+            android:layout_centerInParent="true"
+            android:text="@string/sipars"
+            android:textColor="@color/colorBlack" />
     </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/followers"
+        android:id="@+id/product"
+        android:layout_below="@+id/titlehediye"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/header"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="wrap_content" >
 
 
     </android.support.v7.widget.RecyclerView>
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_below="@+id/followers"
-        android:layout_margin="3dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Popular" />
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_margin="3dp"
-        android:layout_below="@+id/followers"
-        android:layout_toRightOf="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Recent" />
+
+    <RelativeLayout
+        android:id="@+id/cost"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_below="@+id/product"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <include layout="@layout/costs" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cost2"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@color/colorHeaders"
+        android:layout_below="@+id/cost"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <include layout="@layout/costs2" />
+    </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/movies"
-        android:layout_below="@+id/textView3"
+        android:id="@+id/specify"
+        android:layout_below="@+id/cost2"
+        android:background="@color/colorHeaders"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" >
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_below="@+id/specify"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorwhite"
+        android:background="@color/colorBlack"
+        android:text="@string/devamet" />
 
 
 </RelativeLayout>
